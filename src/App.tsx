@@ -232,8 +232,8 @@ function App() {
               <div
                 ref={provided.innerRef}
                 {...provided.droppableProps}
-                className="flex gap-4 overflow-x-auto pb-4"
-              >
+                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full"
+>
                 {lists.map((list, index) => (
                   <Draggable 
                     key={list.id} 
@@ -245,7 +245,7 @@ function App() {
                       <div
                         ref={provided.innerRef}
                         {...provided.draggableProps}
-                        className={`bg-gray-100 rounded-lg p-4 w-80 flex-shrink-0 ${
+                        className={`bg-gray-100 rounded-lg p-4 w-full  ${
                           snapshot.isDragging ? 'shadow-2xl ring-2 ring-white/50' : ''
                         }`}
                       >

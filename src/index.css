@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* No seu CSS global */
+@media (min-width: 1536px) {
+    .grid-cols-responsive {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
