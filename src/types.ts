@@ -1,9 +1,8 @@
-// Em types.ts
 export type Comment = {
   id?: string;
   text: string;
   createdAt: string;
-  author: string; // Você pode substituir por um ID de usuário se tiver autenticação
+  author: string;
 };
 
 export type Card = {
@@ -19,16 +18,25 @@ export type Card = {
   }[];
   comments?: Comment[];
 };
+
 export interface List {
   id: string;
   title: string;
   order: number;
   board_id: string;
   created_at: string;
+  allowed_users: string[];
+  is_public: boolean;
 }
 
 export interface Board {
   id: string;
   title: string;
   created_at: string;
+}
+
+export interface User {
+  uid: string;
+  email: string;
+  isAdmin: boolean;
 }
